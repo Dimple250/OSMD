@@ -1,0 +1,1228 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	204)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5A5C8B7A021B"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    charSet    	204
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5A5C8B7A021D"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "User"
+		quid       	"5A5C8C190124"
+		stereotype 	"Actor")
+	    (object Class "Администратор"
+		quid       	"5A5C907802DA"
+		stereotype 	"Actor")
+	    (object Class "Сервер"
+		quid       	"5A5C94F6026A"
+		stereotype 	"Actor")
+	    (object Class "Задрот по деньгам"
+		quid       	"5A5DBED80285"
+		stereotype 	"Actor")
+	    (object UseCase "Регистрация"
+		quid       	"5A5C8BE90358"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"5A5C90C101A0"
+			supplier   	"Use Case View::Заполнение бланка"
+			quidu      	"5A5C905E03BF"))
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"5A5C9092002F"
+			supplier   	"Use Case View::Администратор"
+			quidu      	"5A5C907802DA")))
+	    (object UseCase "Авторизация"
+		quid       	"5A5C8C370106"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"5A5C8F73001E"
+			supplier   	"Use Case View::Регистрация"
+			quidu      	"5A5C8BE90358")
+		    (object Inheritance_Relationship
+			quid       	"5A5DB3470122"
+			supplier   	"Use Case View::Главное меню"
+			quidu      	"5A5C90B0024B")))
+	    (object UseCase "Льготы"
+		quid       	"5A5C8EAE0032")
+	    (object UseCase "NewUseCase2"
+		quid       	"5A5C8F9001C7")
+	    (object UseCase "Номер"
+		quid       	"5A5C8FAE0286")
+	    (object UseCase "Заполнение бланка"
+		quid       	"5A5C905E03BF"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"5A5C90D102B9"
+			supplier   	"Use Case View::Главное меню"
+			quidu      	"5A5C90B0024B")))
+	    (object UseCase "Главное меню"
+		quid       	"5A5C90B0024B"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"5A5DB3D000D3"
+			supplier   	"Use Case View::Изменение личных данных"
+			quidu      	"5A5DB36C0387")
+		    (object Inheritance_Relationship
+			quid       	"5A5DB5090039"
+			supplier   	"Use Case View::Ввод показателей"
+			quidu      	"5A5DB4A000D9")
+		    (object Inheritance_Relationship
+			quid       	"5A5DB8860109"
+			supplier   	"Use Case View::Личный кабинет"
+			quidu      	"5A5DB86B03B4")))
+	    (object UseCase "Разрешение на регистрацию"
+		quid       	"5A5C912A038E")
+	    (object UseCase "Редактировать данные"
+		quid       	"5A5C926802E0")
+	    (object UseCase "Потребности"
+		quid       	"5A5C92D4021E")
+	    (object UseCase "Субсидии"
+		quid       	"5A5C93040345")
+	    (object UseCase "Расчет счета"
+		quid       	"5A5C93710113")
+	    (object UseCase "Контролируемые параметры"
+		quid       	"5A5C941C01CF")
+	    (object UseCase "Средние +- значения для проверки НАЁБА"
+		quid       	"5A5C94370170")
+	    (object UseCase "Отправить"
+		quid       	"5A5C946D00C2"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"5A5DB56302C3"
+			supplier   	"Use Case View::Средние +- значения для проверки НАЁБА"
+			quidu      	"5A5C94370170")))
+	    (object UseCase "Пользователь отсутствует"
+		quid       	"5A5C956B0045")
+	    (object UseCase "Изменение личных данных"
+		quid       	"5A5DB36C0387")
+	    (object UseCase "Ввод показателей"
+		quid       	"5A5DB4A000D9"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"5A5DB515004A"
+			supplier   	"Use Case View::Расчет счета"
+			quidu      	"5A5C93710113")
+		    (object Inheritance_Relationship
+			quid       	"5A5DB51B000C"
+			supplier   	"Use Case View::Отправить"
+			quidu      	"5A5C946D00C2")))
+	    (object UseCase "Личный кабинет"
+		quid       	"5A5DB86B03B4")
+	    (object UseCase "Минус ребенок"
+		quid       	"5A5DB94A00E6")
+	    (object UseCase "Калика"
+		quid       	"5A5DB95000FE")
+	    (object UseCase "Играет в ВОВ и был в ВМВ"
+		quid       	"5A5DB95503B3")
+	    (object UseCase "Предыдущие платежи"
+		quid       	"5A5DB9680286")
+	    (object UseCase "Добавлять дома квартиры"
+		quid       	"5A5DBA76003B")
+	    (object UseCase "Редактирование пользователя админом"
+		quid       	"5A5DBA7D014B")
+	    (object UseCase "Заявки"
+		quid       	"5A5DBC890047")
+	    (object UseCase "Голосования потребителей"
+		quid       	"5A5DBCA7020B")
+	    (object UseCase "Сделать шавуху"
+		quid       	"5A5DBCF10387")
+	    (object Association "$UNNAMED$0"
+		quid       	"5A5C8F0400BC"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"5A5C8F040360"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"5A5C8C370106"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"5A5C8F040370"
+			supplier   	"Use Case View::User"
+			quidu      	"5A5C8C190124")))
+	    (object Association "$UNNAMED$3"
+		quid       	"5A5C90BA025F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"5A5C90BA0397"
+			supplier   	"Use Case View::Заполнение бланка"
+			quidu      	"5A5C905E03BF"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"5A5C90BA0399"
+			supplier   	"Use Case View::Регистрация"
+			quidu      	"5A5C8BE90358")))
+	    (object Association "$UNNAMED$6"
+		quid       	"5A5C92E8027C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"5A5C92EC026B"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"5A5C8C370106"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"5A5C92EC027B"
+			supplier   	"Use Case View::Администратор"
+			quidu      	"5A5C907802DA")))
+	    (object Association "$UNNAMED$9"
+		quid       	"5A5DB301007E"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"5A5DB30102DF"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"5A5C8C370106"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"5A5DB30102E1"
+			supplier   	"Use Case View::Администратор"
+			quidu      	"5A5C907802DA"))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5A5C8B7A0260"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object UseCaseDiagram "OSMD"
+		quid       	"5A5C8BBA02ED"
+		title      	"OSMD"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	484
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::Льготы" @1
+			location   	(1303, 1244)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(1303, 1382)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Льготы")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C8EAE0032"
+			height     	118)
+		    (object UseCaseView "Use Case View::Главное меню" @2
+			location   	(1255, 796)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1255, 934)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Главное меню")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C90B0024B"
+			height     	118)
+		    (object UseCaseView "Use Case View::Регистрация" @3
+			location   	(1033, 200)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(1033, 338)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Регистрация")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C8BE90358"
+			height     	118)
+		    (object UseCaseView "Use Case View::Заполнение бланка" @4
+			location   	(1458, 406)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(1458, 544)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Заполнение бланка")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C905E03BF"
+			height     	118)
+		    (object InheritView "" @5
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5C90C101A0"
+			client     	@3
+			supplier   	@4
+			vertices   	(list Points
+			    (1149, 255)
+			    (1348, 351))
+			line_style 	0)
+		    (object InheritView "" @6
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5C90D102B9"
+			client     	@4
+			supplier   	@2
+			vertices   	(list Points
+			    (1372, 569)
+			    (1280, 738))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Разрешение на регистрацию" @7
+			location   	(2089, 1018)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@7
+			    location   	(2089, 1156)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Разрешение на регистрацию")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C912A038E"
+			height     	118)
+		    (object UseCaseView "Use Case View::Редактировать данные" @8
+			location   	(3856, 1278)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@8
+			    location   	(3856, 1416)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Редактировать данные")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C926802E0"
+			height     	118)
+		    (object UseCaseView "Use Case View::Потребности" @9
+			location   	(2346, 1243)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@9
+			    location   	(2346, 1381)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Потребности")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C92D4021E"
+			height     	118)
+		    (object UseCaseView "Use Case View::Субсидии" @10
+			location   	(1882, 1237)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(1882, 1375)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Субсидии")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C93040345"
+			height     	118)
+		    (object UseCaseView "Use Case View::Расчет счета" @11
+			location   	(1761, 309)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@11
+			    location   	(1761, 447)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Расчет счета")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C93710113"
+			height     	118)
+		    (object UseCaseView "Use Case View::Контролируемые параметры" @12
+			location   	(3631, 1031)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@12
+			    location   	(3631, 1169)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Контролируемые параметры")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C941C01CF"
+			height     	118)
+		    (object UseCaseView "Use Case View::Средние +- значения для проверки НАЁБА" @13
+			location   	(3114, 156)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@13
+			    location   	(3114, 294)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Средние +- значения для проверки НАЁБА")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C94370170"
+			height     	118)
+		    (object ClassView "Class" "Use Case View::Сервер" @14
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3810, 362)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@14
+			    location   	(3810, 522)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	335
+			    justify    	0
+			    label      	"Сервер")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5A5C94F6026A"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Пользователь отсутствует" @15
+			location   	(2896, 1078)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@15
+			    location   	(2896, 1216)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Пользователь отсутствует")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C956B0045"
+			height     	118)
+		    (object ClassView "Class" "Use Case View::User" @16
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(264, 593)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@16
+			    location   	(264, 753)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	328
+			    justify    	0
+			    label      	"User")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5A5C8C190124"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Отправить" @17
+			location   	(2373, 578)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@17
+			    location   	(2373, 716)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Отправить")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C946D00C2"
+			height     	118)
+		    (object ClassView "Class" "Use Case View::Администратор" @18
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(248, 190)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@18
+			    location   	(248, 350)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	331
+			    justify    	0
+			    label      	"Администратор")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5A5C907802DA"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object DependencyView "" @19
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5C9092002F"
+			client     	@3
+			supplier   	@18
+			vertices   	(list Points
+			    (923, 196)
+			    (305, 190))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Авторизация" @20
+			location   	(706, 703)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@20
+			    location   	(706, 841)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Авторизация")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5C8C370106"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$0" @21
+			location   	(458, 639)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5C8F0400BC"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @22
+				Parent_View 	@21
+				location   	(72, 299)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5A5C8F040360"
+				client     	@21
+				supplier   	@20
+				vertices   	(list Points
+				    (458, 639)
+				    (596, 672))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @23
+				Parent_View 	@21
+				location   	(72, 299)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5A5C8F040370"
+				client     	@21
+				supplier   	@16
+				vertices   	(list Points
+				    (458, 639)
+				    (321, 606))
+				line_style 	0)))
+		    (object InheritView "" @24
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5C8F73001E"
+			client     	@20
+			supplier   	@3
+			vertices   	(list Points
+			    (741, 644)
+			    (925, 363))
+			line_style 	0)
+		    (object AssociationViewNew "$UNNAMED$9" @25
+			location   	(523, 497)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5DB301007E"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @26
+				Parent_View 	@25
+				location   	(247, 307)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5A5DB30102DF"
+				client     	@25
+				supplier   	@20
+				vertices   	(list Points
+				    (523, 497)
+				    (654, 645))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @27
+				Parent_View 	@25
+				location   	(247, 307)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5A5DB30102E1"
+				client     	@25
+				supplier   	@18
+				vertices   	(list Points
+				    (523, 497)
+				    (392, 350))
+				line_style 	0)))
+		    (object InheritView "" @28
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5DB3470122"
+			client     	@20
+			supplier   	@2
+			vertices   	(list Points
+			    (814, 719)
+			    (1144, 775))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Изменение личных данных" @29
+			location   	(359, 1146)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@29
+			    location   	(359, 1284)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Изменение личных данных")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5DB36C0387"
+			height     	118)
+		    (object InheritView "" @30
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5DB3D000D3"
+			client     	@2
+			supplier   	@29
+			vertices   	(list Points
+			    (1145, 836)
+			    (467, 1101))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Ввод показателей" @31
+			location   	(1843, 662)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@31
+			    location   	(1843, 800)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Ввод показателей")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5DB4A000D9"
+			height     	118)
+		    (object InheritView "" @32
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5DB5090039"
+			client     	@2
+			supplier   	@31
+			vertices   	(list Points
+			    (1363, 767)
+			    (1733, 684))
+			line_style 	0)
+		    (object InheritView "" @33
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5DB515004A"
+			client     	@31
+			supplier   	@11
+			vertices   	(list Points
+			    (1827, 603)
+			    (1798, 472))
+			line_style 	0)
+		    (object InheritView "" @34
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5DB51B000C"
+			client     	@31
+			supplier   	@17
+			vertices   	(list Points
+			    (1951, 642)
+			    (2263, 592))
+			line_style 	0)
+		    (object InheritView "" @35
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5DB56302C3"
+			client     	@17
+			supplier   	@13
+			vertices   	(list Points
+			    (2470, 518)
+			    (2872, 292))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Личный кабинет" @36
+			location   	(902, 1181)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@36
+			    location   	(902, 1319)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Личный кабинет")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5DB86B03B4"
+			height     	118)
+		    (object InheritView "" @37
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5A5DB8860109"
+			client     	@2
+			supplier   	@36
+			vertices   	(list Points
+			    (1121, 941)
+			    (951, 1123))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Минус ребенок" @38
+			location   	(1559, 1059)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@38
+			    location   	(1559, 1197)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Минус ребенок")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5DB94A00E6"
+			height     	118)
+		    (object UseCaseView "Use Case View::Калика" @39
+			location   	(1846, 959)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@39
+			    location   	(1846, 1097)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Калика")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5DB95000FE"
+			height     	118)
+		    (object UseCaseView "Use Case View::Играет в ВОВ и был в ВМВ" @40
+			location   	(2414, 884)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@40
+			    location   	(2414, 1022)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Играет в ВОВ и был в ВМВ")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5DB95503B3"
+			height     	118)
+		    (object UseCaseView "Use Case View::Предыдущие платежи" @41
+			location   	(2830, 775)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@41
+			    location   	(2830, 913)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Предыдущие платежи")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5DB9680286"
+			height     	118)
+		    (object UseCaseView "Use Case View::Добавлять дома квартиры" @42
+			location   	(412, 1356)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@42
+			    location   	(412, 1494)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Добавлять дома квартиры")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5DBA76003B"
+			height     	118)
+		    (object UseCaseView "Use Case View::Редактирование пользователя админом" @43
+			location   	(2755, 499)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@43
+			    location   	(2755, 637)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Редактирование пользователя админом")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5DBA7D014B"
+			height     	118)
+		    (object UseCaseView "Use Case View::Заявки" @44
+			location   	(2362, 297)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@44
+			    location   	(2362, 435)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Заявки")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5DBC890047"
+			height     	118)
+		    (object UseCaseView "Use Case View::Голосования потребителей" @45
+			location   	(2171, 100)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@45
+			    location   	(2171, 238)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Голосования потребителей")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5DBCA7020B"
+			height     	118)
+		    (object UseCaseView "Use Case View::Сделать шавуху" @46
+			location   	(3202, 527)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@46
+			    location   	(3202, 665)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Сделать шавуху")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5A5DBCF10387"
+			height     	118)
+		    (object ClassView "Class" "Use Case View::Задрот по деньгам" @47
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(262, 884)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@47
+			    location   	(262, 1044)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	403
+			    justify    	0
+			    label      	"Задрот по деньгам")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"5A5DBED80285"
+			annotation 	8
+			autoResize 	TRUE)))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5A5C8B7A021C"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5A5C8B7A021E"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5A5C8B7A022B"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5A5C8B7A021E"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5A5C8B7A025F"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"5A5C8B7A021C")
+    process_structure 	(object Processes
+	quid       	"5A5C8B7A021F"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5A5C8B7A0221"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5A5C8B7A0220"))
