@@ -14,10 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    auto.cpp
+    auto.cpp \
+    admchange.cpp
 
 HEADERS  += mainwindow.h \
-    auto.h
+    auto.h \
+    admchange.h
 
 FORMS    += mainwindow.ui \
-    auto.ui
+    auto.ui \
+    admchange.ui

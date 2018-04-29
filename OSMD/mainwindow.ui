@@ -96,21 +96,21 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="ButtonAddUser">
          <property name="text">
           <string>Добавить пользователя</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_7">
+        <widget class="QPushButton" name="ButtonDelUser">
          <property name="text">
           <string>Удалить пользователя</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_8">
+        <widget class="QPushButton" name="ButtonRegUser">
          <property name="text">
           <string>Редактировать пользователя</string>
          </property>
@@ -121,21 +121,21 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="ButtonChangePriv">
          <property name="text">
           <string>Изменить привелегии</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="ButtonCHangePrices">
          <property name="text">
           <string>Изменить цены</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="ButtonAddNews">
          <property name="text">
           <string>Добавить новость</string>
          </property>
