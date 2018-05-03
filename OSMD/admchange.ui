@@ -57,7 +57,7 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QLabel" name="frameAddUsName">
+   <widget class="QLabel" name="lframeUSName">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -237,25 +237,6 @@
      </rect>
     </property>
    </widget>
-   <zorder>frameAddUsName</zorder>
-   <zorder>lineLogin</zorder>
-   <zorder>linePass</zorder>
-   <zorder>label_Login</zorder>
-   <zorder>label_Pass</zorder>
-   <zorder>label_FIO</zorder>
-   <zorder>lineFIO</zorder>
-   <zorder>label_Dom</zorder>
-   <zorder>lineDom</zorder>
-   <zorder>label_Kvartira</zorder>
-   <zorder>lineRoom</zorder>
-   <zorder>label_Chel</zorder>
-   <zorder>lineChel</zorder>
-   <zorder>label_Priv</zorder>
-   <zorder>linePriv</zorder>
-   <zorder>frameChangePriv</zorder>
-   <zorder>frameChangePriv</zorder>
-   <zorder>frameChangePrice</zorder>
-   <zorder>frameChangePrice</zorder>
   </widget>
   <widget class="QFrame" name="frameChangeUser">
    <property name="geometry">
@@ -520,12 +501,6 @@
      </rect>
     </property>
    </widget>
-   <zorder>framePrivName</zorder>
-   <zorder>lineDecrease</zorder>
-   <zorder>label_decrease</zorder>
-   <zorder>comboBox</zorder>
-   <zorder>frameChangePriv_2</zorder>
-   <zorder>frameChangePriv_2</zorder>
   </widget>
   <widget class="QFrame" name="frameChangePrice">
    <property name="geometry">
@@ -622,7 +597,7 @@
     </property>
    </widget>
   </widget>
-  <widget class="QFrame" name="frameChangePriv_2">
+  <widget class="QFrame" name="frameChangeNews">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -679,7 +654,7 @@
   <zorder>frameAddUser</zorder>
   <zorder>frameChangePrice</zorder>
   <zorder>frameChangePriv</zorder>
-  <zorder>frameChangePriv_2</zorder>
+  <zorder>frameChangeNews</zorder>
  </widget>
  <resources/>
  <connections>

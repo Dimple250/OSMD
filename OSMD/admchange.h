@@ -14,6 +14,7 @@ class AdmChange : public QDialog
 public:
     explicit AdmChange(QWidget *parent = 0);
     ~AdmChange();
+    void openFrame(int id);
 
 private:
     Ui::AdmChange *ui;

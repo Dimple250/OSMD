@@ -73,8 +73,6 @@
           </rect>
          </property>
         </widget>
-        <zorder>tableView_Priv</zorder>
-        <zorder>verticalLayoutWidget_3</zorder>
        </widget>
        <widget class="QWidget" name="tab_4">
         <attribute name="title">
@@ -145,8 +143,6 @@
      </item>
     </layout>
    </widget>
-   <zorder>verticalLayoutWidget</zorder>
-   <zorder>pushButton_9</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
